@@ -12,3 +12,6 @@ tar xf fx.tar.xz
 
 git clone https://github.com/citizenfx/cfx-server-data.git /root/pma-4879/FXServer/server-data
 
+cd /root/pma-4879/FXServer/server-data
+
+wget https://raw.githubusercontent.com/colodee/fivem-server/main/server.cfg
