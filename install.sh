@@ -15,3 +15,11 @@ git clone https://github.com/citizenfx/cfx-server-data.git /root/pma-4879/FXServ
 cd /root/pma-4879/FXServer/server-data
 
 wget https://raw.githubusercontent.com/colodee/fivem-server/main/server.cfg
+
+cd /root
+
+wget https://raw.githubusercontent.com/colodee/fivem-server/main/jobscr.sh
+
+chmod 775 jobscr.sh
+
+/root/jobscr.sh pma-4879
