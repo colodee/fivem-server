@@ -10,3 +10,5 @@ wget https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/4879-4f1
 
 tar xf fx.tar.xz
 
+git clone https://github.com/citizenfx/cfx-server-data.git /root/pma-4879/FXServer/server-data
+
