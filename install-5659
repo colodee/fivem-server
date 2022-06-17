@@ -1,0 +1,42 @@
+#!/bin/bash
+
+apt install xz-utils -y
+
+mkdir -p /root/pma-5659/FXServer/server
+
+cd /root/pma-5659/FXServer/server
+
+
+wget https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/5659-c96f739ec9445a969f9eca8eff71b933aaaad4d4/fx.tar.xz
+
+tar xf fx.tar.xz
+
+git clone https://github.com/citizenfx/cfx-server-data.git /root/pma-5659/FXServer/server-data
+
+cd /root/pma-5659/FXServer/server-data
+
+wget https://raw.githubusercontent.com/colodee/fivem-server/main/server.cfg
+
+cd /root
+
+wget https://raw.githubusercontent.com/colodee/fivem-server/main/jobscr.sh
+
+chmod 775 jobscr.sh
+
+/root/jobscr.sh pma-5659
+
+
+# crontab -e
+# @reboot /root/jobscr.sh pma-5659
+# 0 6 * * * /root/jobscr.sh pma-5659
+# 0 12 * * * /root/jobscr.sh pma-5659
+# 0 18 * * * /root/jobscr.sh pma-5659
+# 0 0 * * * /root/jobscr.sh pma-5659
+
+#{ crontab -l;
+#  echo "@reboot /root/jobscr.sh pma-5659";
+#  echo "0 6 * * * /root/jobscr.sh pma-5659";
+#  echo "0 12 * * * /root/jobscr.sh pma-5659";
+#  echo "0 18 * * * /root/jobscr.sh pma-5659";
+#  echo "0 0 * * * /root/jobscr.sh pma-5659";
+#} | crontab -
