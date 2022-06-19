@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt install xz-utils -y
+apt install xz-utils screen -y
 
 mkdir -p /root/pma-4879/FXServer/server
 
